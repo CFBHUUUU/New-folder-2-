@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم طائرات</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- إضافة أيقونات Font Awesome -->
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">أهلاً بك في عالم حسابات الطائرات</div>
+
+        <label for="totalPassengers">عدد الركاب الكلي | Total number of passengers</label>
+        <input type="number" id="totalPassengers" required>
+
+        <label for="passengersPerRow">عدد الركاب في السطر الواحد N </label>
+        <input type="number" id="passengersPerRow" required>
+
+        <label for="wallThickness">سمك الجدار  t (سم)   </label>
+        <input type="number" id="wallThickness" required>
+
+        <label for="lengthNose"> طول مقدمة الطائرة المقارنة Ln   (متر)  </label>
+        <input type="number" id="lengthNose" required>
+
+        <label for="lengthCabin">الطول الإجمالي لمقصورة الطائرة المقارنة   Lc  (متر)</label>
+        <input type="number" id="lengthCabin" required>
+
+        <label for="lengthTail">طول وحدة الذيل  للطائرة المقارنة  Lt  (متر)</label>
+        <input type="number" id="lengthTail" required>
+
+        <label for="speed">سرعة الطائرة   Vmax    (متر/ثانية):</label>
+        <input type="number" id="speed" required>
+
+        <label for="centerDistance"> الطول من مركز الجناح إلى مركز الذيل    ℒt     (متر):</label>
+        <input type="number" id="centerDistance" required>
+
+        <label for="seatingArrangement">تصنيف مقاعد الطائرة</label>
+        <select id="seatingArrangement">
+            <option value="اقتصادي">اقتصادي</option>
+            <option value="ممتاز">ممتاز</option>
+            <option value="فاخر">فاخر</option>
+        </select>
+        <h3>خيارات الوزن الإضافي</h3>
+        <div>
+            <input type="checkbox" id="pressurizedCabin" value="0.08">
+            <label for="pressurizedCabin">8% مقصورة مضغوطة</label>
+        </div>
+        <div>
+            <input type="checkbox" id="rearEngines" value="0.04">
+            <label for="rearEngines">4% محركات مثبتة في الذيل</label>
+        </div>
+        <div>
+            <input type="checkbox" id="mainUC" value="0.07">
+            <label for="mainUC">7% العجلات الرئيسية متصلة بجسم الطائرة</label>
+        </div>
+        <div>
+            <input type="checkbox" id="freighterAircraft" value="0.10">
+            <label for="freighterAircraft">10% طائرات شحن</label>
+        </div>
+
+        <button onclick="calculate()" style="width: 100%;">احسب</button>
+
+        <div id="results"></div>
+        <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        </head>
+        <div style="text-align: center; margin-top: 20px;">
+            <p>جميع الحقوق محفوظة &copy; علي عوزي</p>
+            <p>تواصل مع المطور:</p>
+            <p>
+                <a href="https://t.me/Ali_S_Auzi" target="_blank">
+                    <i class="fab fa-telegram-plane"></i> تليجرام
+                </a> |
+                <a href="https://www.instagram.com/Ali.S.Auzi" target="_blank">
+                    <i class="fab fa-instagram"></i> إنستغرام
+                </a> |
+                <a href="mailto:alisaadauzi212@gmail.com">
+                    <i class="fas fa-envelope"></i> البريد الإلكتروني
+                </a>
+            </p>
+        </div>   
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
